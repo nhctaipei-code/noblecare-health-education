@@ -1,3 +1,21 @@
+# 貴族長照｜慢性病衛教
+
+貴族長照中心維護的非營利衛教版本，免密碼使用。
+
+- 本站網址：https://nhctaipei-code.github.io/noblecare-health-education/
+- 本站 GitHub：https://github.com/nhctaipei-code/noblecare-health-education
+- 原始教材：https://github.com/mattsue1003/chronic-disease-health-education
+- 原作者：愛迪樂健康促進團隊・鍾孟修 職能治療師
+- 原始版本：`a7cff4204ffa9f2e2386b5f19d2ea2cebaf196a6`
+
+## 本站調整與授權
+
+調整網站名稱、機構標示、教材封面署名及入口手機排版。醫療內容、引用來源、題目、答案與互動程式均保留，未宣稱重新完成醫學審查。標題使用「慢性病衛教」，因為內容涵蓋十二個主題；痛風與退化性關節炎只是其中部分。
+
+依原作者 README 的授權，長照機構得為非營利衛教與健康促進使用及修改，轉用或改作須保留出處，商業使用須先聯繫原作者。貴族版本的建立不表示取得原教材的獨占著作權。以下保留原作說明與授權。
+
+---
+
 # 長者慢性病互動教學簡報
 
 社區據點最常開的 12 個慢性病主題，做成**講師投影帶團體**的互動簡報。

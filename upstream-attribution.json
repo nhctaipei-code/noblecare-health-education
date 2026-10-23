@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/mattsue1003/chronic-disease-health-education",
+  "sourceCommit": "a7cff4204ffa9f2e2386b5f19d2ea2cebaf196a6",
+  "originalAuthor": "愛迪樂健康促進團隊・鍾孟修 職能治療師",
+  "maintainer": "貴族長照中心",
+  "purpose": "非營利衛教與健康促進",
+  "licenseSource": "README.md 授權段落",
+  "originalLicenseText": "歡迎社區據點、衛生單位、長照與醫療機構自由使用與修改，用於非營利的衛教與健康促進。\r\n轉用或改作時請保留出處。若需商業使用，請先聯繫。",
+  "changes": [
+    "institution branding",
+    "homepage mobile layout",
+    "cover attribution"
+  ],
+  "medicalContentChanged": false,
+  "publicUrl": "https://nhctaipei-code.github.io/noblecare-health-education/"
+}
