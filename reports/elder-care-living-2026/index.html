@@ -166,7 +166,7 @@
 #slide-8 .abcnode{position:relative!important}
 @media (max-width:650px){#speaker-assist{top:15px;left:10px;right:10px;width:calc(100vw - 20px);max-height:calc(100vh - 25px)}#speaker-assist .speaker-body{font-size:16px}}
 @media print{.speak-dot,.inline-note-dot,#speaker-assist{display:none!important}}
-</style></head><body><svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+</style><style id="speaker-touch-target">.inline-note-dot{width:33px;height:33px;font-size:15px}.speak-dot{width:42px;height:42px;font-size:18px}</style></head><body><svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
 <symbol id="icon-house" viewbox="0 0 48 48"><path d="M6 22 24 7l18 15v19H7V22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path d="M19 41V28h10v13" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3"></path></symbol>
 <symbol id="icon-sun" viewbox="0 0 48 48"><circle cx="24" cy="24" fill="none" r="9" stroke="currentColor" stroke-width="3"></circle><path d="M24 3v8m0 26v8M3 24h8m26 0h8M9 9l6 6m18 18 6 6M39 9l-6 6M15 33l-6 6" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path></symbol>
 <symbol id="icon-building" viewbox="0 0 48 48"><rect fill="none" height="36" rx="2" stroke="currentColor" stroke-width="3" width="30" x="9" y="6"></rect><path d="M17 14h5m5 0h5M17 22h5m5 0h5M17 30h5m5 0h5M21 42v-7h7v7" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path></symbol>
@@ -388,6 +388,13 @@ document.addEventListener("click",e=>{
   slide.querySelectorAll("[data-phase-panel]").forEach(p=>p.classList.toggle("active",p.dataset.phasePanel===active));
  }
 });
+const existingNotesButton=document.getElementById("notes");
+if(existingNotesButton){
+ existingNotesButton.onclick=e=>{e.preventDefault();e.stopPropagation();const active=document.querySelector("section.slide.active");open(active?Number(active.id.replace("slide-",""))-1:0,0)};
+ existingNotesButton.setAttribute("title","補充說明");
+ existingNotesButton.setAttribute("aria-label","開啟本頁補充說明");
+}
+document.addEventListener("keydown",e=>{if((e.key==="n"||e.key==="N")&&!e.altKey&&!e.ctrlKey&&!e.metaKey){const active=document.querySelector("section.slide.active");open(active?Number(active.id.replace("slide-",""))-1:0,0);e.stopImmediatePropagation();e.preventDefault()}},true);
 document.getElementById("speaker-assist-close").addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!box.hidden){close();e.stopPropagation()}});
 window.addEventListener("hashchange",()=>{close()});
